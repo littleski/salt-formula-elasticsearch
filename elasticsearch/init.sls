@@ -1,7 +1,7 @@
 
 {%- if pillar.elasticsearch is defined %}
 include:
-{%- if pillar.repo is defined %}
+{%- if pillar.elasticsearch.repo is defined %}
 elk_repo:
   pkgrepo.managed:
     - humanname: ELK repository for 7.x packages
