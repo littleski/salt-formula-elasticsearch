@@ -1,6 +1,5 @@
 
 {%- if pillar.elasticsearch is defined %}
-include:
 {%- if pillar.elasticsearch.repo is defined %}
 elk_repo:
   pkgrepo.managed:
@@ -9,6 +8,7 @@ elk_repo:
     - gpgcheck: 1
     - gpgkey: https://artifacts.elastic.co/GPG-KEY-elasticsearch
 {%- endif %}
+include:
 {%- if pillar.elasticsearch.server is defined %}
 - elasticsearch.server
 {%- endif %}
