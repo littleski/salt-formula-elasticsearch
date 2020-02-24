@@ -8,7 +8,7 @@ elk_repo:
     - baseurl: https://artifacts.elastic.co/packages/7.x/yum
     - gpgcheck: 1
     - gpgkey: https://artifacts.elastic.co/GPG-KEY-elasticsearch
-
+{%- endif %}
 {%- if pillar.elasticsearch.server is defined %}
 - elasticsearch.server
 {%- endif %}
